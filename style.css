@@ -90,7 +90,7 @@ section{
 
  .home-img img{
     width: 35vw;
-    animation: floatImage 5s ease-in-out infinite; 
+    /* animation: floatImage 5s ease-in-out infinite;  */
 } 
 .home h1{
     margin-right: 20rem;
