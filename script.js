@@ -7,7 +7,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-
 /*============= scroll sections active link =============*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -19,8 +18,8 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links =>{
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
@@ -31,53 +30,53 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100);
 
-/*============= remove toggle icon and navbar when click navbar link =============*/
+    /*============= remove toggle icon and navbar when click navbar link =============*/
 
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
 
-    /*============= scroll reveal =============*/
-    ScrollReveal({ 
-        //reset: true,
-        distance: '80px',
-        duration: 2000,
-        delay: 200
-    });
+/*============= scroll reveal =============*/
+ScrollReveal({
+    //reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
 
-   ScrollReveal().reveal('.home-content, .heading,.contact-center', { origin: 'top' });
-   ScrollReveal().reveal('.home-img, .skill-container, .projects-box, .contact form', { origin: 'bottom' });
-   ScrollReveal().reveal('.home-content h1,.about-img,', { origin: 'left' });
-   ScrollReveal().reveal('.home-content p,.about-content', { origin: 'right' });
-
-
-    /*============= typed js =============*/
-
-    new TypeIt("#type1", {
-        speed: 120,
-        loop: true,
-        waitUntilVisible: true,
-      })
-        .type("Android Developer", { delay: 400 })
-        .pause(500)
-        .delete(17)
-        .type("Programmer", { delay: 400 })
-        .pause(500)
-        .delete(17)
-        .go();
+ScrollReveal().reveal('.home-content, .heading,.contact-center', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .skill-container, .projects-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1,.about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p,.about-content', { origin: 'right' });
 
 
-        new TypeIt("#type2", {
-            speed: 120,
-            loop: true,
-            waitUntilVisible: true,
-          })
-            .type("Android Developer", { delay: 400 })
-            .pause(500)
-            .delete(17)
-            .type("Programmer", { delay: 400 })
-            .pause(500)
-            .delete(17)
-            .go();
+/*============= typed js =============*/
+
+new TypeIt("#type1", {
+    speed: 120,
+    loop: true,
+    waitUntilVisible: true,
+})
+    .type("Android Developer", { delay: 400 })
+    .pause(500)
+    .delete(17)
+    .type("Programmer", { delay: 400 })
+    .pause(500)
+    .delete(17)
+    .go();
+
+
+new TypeIt("#type2", {
+    speed: 120,
+    loop: true,
+    waitUntilVisible: true,
+})
+    .type("Android Developer", { delay: 400 })
+    .pause(500)
+    .delete(17)
+    .type("Programmer", { delay: 400 })
+    .pause(500)
+    .delete(17)
+    .go();
 
 
